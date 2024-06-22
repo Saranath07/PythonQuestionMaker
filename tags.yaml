@@ -1,0 +1,42 @@
+data_types:
+  - int
+  - float
+  - str
+  - bool
+  - list
+  - tuple
+  - set
+  - dict
+  - type_conversion
+
+data_structures:
+  - list_operations
+  - tuple_operations
+  - set_operations
+  - dictionary_operations
+  - comprehensions
+  - collections_module
+  - arrays
+  - stacks
+  - queues
+
+loops:
+  - for_loop
+  - while_loop
+  - nested_loops
+  - loop_control
+  - break_statement
+  - continue_statement
+  - pass_statement
+  - list_comprehensions
+
+functions:
+  - def
+  - parameters
+  - return_statement
+  - lambda
+  - scope
+  - recursion
+  - decorators
+  - built_in_functions
+  - higher_order_functions
