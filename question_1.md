@@ -1,32 +1,29 @@
-Here's a problem statement that involves string operations in Python, which might be challenging for you to solve:
+Here's a problem statement that you can work on to improve your string operations in Python, inspired by Attack on Titan:
 
 **Problem Statement:**
 
-The Scout Regiment from Attack on Titan is on a mission to clear the Titans from the city. They have received a message from their leader, Captain Levi, that contains a list of Titan names and their corresponding strengths. The message is encrypted and can only be decrypted by finding the substrings in the message that match the Titan names.
+In the world of Attack on Titan, the Scout Regiment is searching for a way to infiltrate the walls to reclaim their world. They've discovered a cryptic message etched into the wall, which reads: "The Titans' weakness lies in the patterns of their roar."
 
-Write a Python function that takes a string as input, which is the encrypted message, and returns a list of substrings that correspond to the Titan names. The function should return the substrings in the order they appear in the message.
+The message is encrypted using a Caesar Cipher, where each letter is shifted by a certain number of positions. The Scout Regiment has found a few decrypted letters, but they still need to figure out the pattern to crack the code.
+
+**Task:**
+
+Write a Python function that takes a string as input, representing the encrypted message. The function should return the decrypted message, using the Caesar Cipher technique.
 
 **Test Cases:**
 
-1. Input: "Eren Yeager 100, Mikasa Ackerman 90, Armin Arlert 80, Sasha Braus 70"
-Output: ["Eren Yeager", "Mikasa Ackerman", "Armin Arlert", "Sasha Braus"]
-
-2. Input: "Reiner Braun 100, Bertholdt Fuber 90, Erwin Smith 80, Annie Leonhart 70"
-Output: ["Reiner Braun", "Bertholdt Fuber", "Erwin Smith", "Annie Leonhart"]
-
-3. Input: "Levi Ackerman 100, Erwin Smith 90, Hange Zoë 80, Conny Springer 70"
-Output: ["Levi Ackerman", "Erwin Smith", "Hange Zoë", "Conny Springer"]
-
-4. Input: "Some random text that does not contain Titan names"
-Output: an empty list []
+1. `input_string = "GUR PENML XRL VF ZL FRPERG"` should return `output_string = "THE WALL IS OUR FUTURE"`
+2. `input_string = "FURRQ CVYYRQ VF ZL ZRQF"` should return `output_string = "THE TITANS ARE OUR ENEMY"`
+3. `input_string = ""` should return `output_string = ""`
 
 **Constraints:**
 
-* The input string will only contain letters, spaces, and digits.
-* The Titan names will always be in the format "First Name Last Name" separated by a space.
-* The strengths will always be integers.
-* The function should return the substrings in the order they appear in the message.
+* The input string will contain only uppercase letters and spaces.
+* The decrypted message should be in English.
+* The Caesar Cipher shift is a single fixed number (you can assume it's 3, for simplicity).
 
-**Bonus Challenge:**
+**Hint:**
 
-Can you modify the function to also return the strengths of the Titans along with their names? For example, the output for the first test case could be `[("Eren Yeager", 100), ("Mikasa Ackerman", 90), ("Armin Arlert", 80), ("Sasha Braus", 70)]`.
+You can use the `ord` and `chr` functions to manipulate the ASCII values of the characters. You can also use a dictionary or a list comprehension to create a mapping of the encrypted characters to their decrypted counterparts.
+
+Take your time to work on this problem, and don't hesitate to ask for help if you get stuck!
