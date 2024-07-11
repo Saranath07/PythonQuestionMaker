@@ -1,0 +1,36 @@
+---
+title: "Prompting using LangChain"
+author: "Saranath P"
+format:
+  revealjs:
+    menu:
+        side: right
+        width: wide
+    theme: dark
+    highlight-style: dracula
+    slide-number: true
+    slide-tone: true
+    css: custom.css
+---
+
+# Basics of Prompt Engineering
+
+---
+
+## Base LLM
+
+\
+
+
+<span class="fragment" data-fragment-index="1"> Predicting the next word based on text training data </span>
+
+\
+
+
+<span class="fragment" data-fragment-index="2"> The cat is sitting on the </span> <span class="fragment" style="color: lightgreen;"  data-fragment-index="3">table. It is trying to jump out of the table.</span>
+
+
+---
+
+## Instruction tuned LLM
+
