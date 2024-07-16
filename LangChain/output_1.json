@@ -1,0 +1,25 @@
+{
+    "userConcept": "loops",
+    "userInterest": "sports",
+    "problem_statement": "Write a Python program to find the highest score in a list of cricket matches.",
+    "function_name": "find_highest_score",
+    "function_template": "def find_highest_score(scores):\n    # Your code here\n    pass",
+    "test_cases": [
+        {
+            "input": [
+                100,
+                150,
+                200
+            ],
+            "output": "200"
+        },
+        {
+            "input": [
+                50,
+                75,
+                120
+            ],
+            "output": "120"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "userConcept": "functions",
+    "userInterest": "tamil movies",
+    "problem_statement": "Write a Python program to calculate the total box office collection of a list of Tamil movies.",
+    "function_name": "calculate_total_collection",
+    "function_template": "def calculate_total_collection(movies):\n    # Your code here\n    pass",
+    "test_cases": [
+        {
+            "input": [
+                "Enthiran",
+                "Baahubali",
+                "Petta"
+            ],
+            "collection": [
+                100,
+                200,
+                300
+            ],
+            "output": "600"
+        },
+        {
+            "input": [
+                "Viswaroopam",
+                "Kabali",
+                "2.0"
+            ],
+            "collection": [
+                50,
+                100,
+                250
+            ],
+            "output": "400"
+        }
+    ]
+}

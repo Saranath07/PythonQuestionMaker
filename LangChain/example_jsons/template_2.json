@@ -1,0 +1,19 @@
+{
+    "userConcept" : "file handling",
+    "userInterest" : "fruits",
+    "problem_statement": "Write a Python program to read a file named 'fruits.txt' and list out all the fruits in a python list.",
+    "function_name": "display_fruits",
+    "function_template": "def display_fruits(filename):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "fruits.txt",
+            "content" : "apple \\n mango \\n banana",
+            "output": "['apple', 'mango', 'banana']"
+        },
+        {
+            "input": "fruits.txt",
+            "content" : "blueberry \\n strawberry \\n raspberry",
+            "output": "['blueberry', 'strawberry', 'raspberry']"
+        }
+    ]
+}
