@@ -1,0 +1,3 @@
+Write a function add that adds two numbers.
+Write a function that checks if a number is prime.
+Write a function that reverses a string.
