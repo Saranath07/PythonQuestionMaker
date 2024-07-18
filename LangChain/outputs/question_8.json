@@ -1,1 +1,26 @@
-"{\"userConcept\": \"functions\", \"userInterest\": \"tamil movies\", \"problem_statement\": \"Write a Python program to calculate the total awards won by a Tamil movie actor\", \"function_name\": \"calculate_awards\", \"function_template\": \"def calculate_awards(movies):\\\\n    # Your code here\\\\n    pass\", \"test_cases\": [{\"input\": \"[{'movie': 'Makkal Selvan', 'awards': 2}, {'movie': 'Aruvi', 'awards': 1}, {'movie': 'Pariyerum Perumal', 'awards': 3}]\", \"output\": 6}, {\"input\": \"[{'movie': 'Madras', 'awards': 1}, {'movie': 'Baahubali', 'awards': 2}, {'movie': 'Kabali', 'awards': 1}]\", \"output\": 4}]}"
+{
+    "userConcept": "list comprehension",
+    "userInterest": "tamil music",
+    "problem_statement": "Write a Python program to create a list of all the songs from the album 'Kadhal Mannan' by Ilaiyaraaja, given the list of songs in a file named 'kadhal_mannan.txt'",
+    "function_name": "songs",
+    "function_template": "def songs(filename):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "kadhal_mannan.txt",
+            "content": "Engeyum Kadhal \\n Kadhal Ooruthu \\n Raja Raja Chozhan \\n",
+            "output": [
+                "Engeyum Kadhal",
+                "Kadhal Ooruthu",
+                "Raja Raja Chozhan"
+            ]
+        },
+        {
+            "input": "kadhal_mannan.txt",
+            "content": "Kadhalar Dhinam \\n Enthan Enthan \\n",
+            "output": [
+                "Kadhalar Dhinam",
+                "Enthan Enthan"
+            ]
+        }
+    ]
+}

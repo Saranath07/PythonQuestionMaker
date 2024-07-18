@@ -1,1 +1,17 @@
-"{'userConcept': 'file handling', 'userInterest': 'cricket', 'problem_statement': \"Write a Python program to read a file named 'cricket_scores.txt' and calculate the total runs scored by a team in a match.\", 'function_name': 'calculate_total_runs', 'function_template': 'def calculate_total_runs(filename):\\\\n    # Your code here\\\\n    pass', 'test_cases': [{'input': 'cricket_scores.txt', 'content': '50 \\\\n 20 \\\\n 30', 'output': '100'}, {'input': 'cricket_scores.txt', 'content': '40 \\\\n 30 \\\\n 20', 'output': '90'}]}"
+{
+    "userConcept": "list comprehension",
+    "userInterest": "cricket",
+    "problem_statement": "Write a Python program to create a list of batsmen who have scored more than 1000 runs in their career using a list comprehension.",
+    "function_name": "high_scorers",
+    "function_template": "def high_scorers(player_data):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "[{\"name\": \"Sachin\", \"runs\": 10000}, {\"name\": \"Brian\", \"runs\": 8000}, {\"name\": \"Virat\", \"runs\": 12000}, {\"name\": \"Rohit\", \"runs\": 9500}]",
+            "output": "['Sachin', 'Virat']"
+        },
+        {
+            "input": "[{\"name\": \"MSD\", \"runs\": 7000}, {\"name\": \"Shikhar\", \"runs\": 4000}, {\"name\": \"Kohli\", \"runs\": 11000}, {\"name\": \"Dhoni\", \"runs\": 8000}]",
+            "output": "['Kohli']"
+        }
+    ]
+}

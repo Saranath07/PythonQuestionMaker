@@ -1,1 +1,42 @@
-"{'userConcept': 'list comprehension', 'userInterest': 'cars', 'problem_statement': \"Write a Python program to create a list of car models from a given list of strings, where each string is a car model with the brand and model separated by a space.\", 'function_name': 'car_models', 'function_template': 'def car_models(cars):\\\\n    # Your code here\\\\n    pass', 'test_cases': [{'input': '[\"Toyota Corolla\", \"Ford Mustang\", \"Honda Civic\"]', 'output': \"['Corolla', 'Mustang', 'Civic']\"}, {'input': '[\"Audi A4\", \"Mercedes-Benz E-Class\", \"BMW X5\"]', 'output': \"['A4', 'E-Class', 'X5']\"}]}"
+{
+    "userConcept": "list comprehension",
+    "userInterest": "tamil music",
+    "problem_statement": "Write a Python program to create a list of all the songs in the album 'Kadhalan' whose duration is greater than 5 minutes using list comprehension.",
+    "function_name": "long_songs",
+    "function_template": "def long_songs(songs):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": [
+                "Ullathil Ullam",
+                4.5,
+                "Kadhalukku Mariyadhai",
+                5.2,
+                "Mukkabla",
+                6.1,
+                "Sundari",
+                4.1
+            ],
+            "output": [
+                "Mukkabla",
+                "Kadhalukku Mariyadhai"
+            ]
+        },
+        {
+            "input": [
+                "Vizhi Moodi",
+                4.2,
+                "Rettai Mannar",
+                5.5,
+                "Oru Vellam",
+                4.8,
+                "Kadhalukku Mariyadhai",
+                5.2
+            ],
+            "output": [
+                "Rettai Mannar",
+                "Mukkabla",
+                "Kadhalukku Mariyadhai"
+            ]
+        }
+    ]
+}

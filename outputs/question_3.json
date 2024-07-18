@@ -1,0 +1,17 @@
+{
+    "userConcept": "functions",
+    "userInterest": "cricket",
+    "problem_statement": "Write a Python program to calculate the total runs scored by a team in a cricket match",
+    "function_name": "calculate_total_runs",
+    "function_template": "def calculate_total_runs(wickets, overs, runs):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "5, 10, 150",
+            "output": "150.0"
+        },
+        {
+            "input": "2, 5, 90",
+            "output": "90.0"
+        }
+    ]
+}

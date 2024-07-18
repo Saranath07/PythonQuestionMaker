@@ -1,0 +1,17 @@
+{
+    "userConcept": "functions",
+    "userInterest": "cricket",
+    "problem_statement": "Write a Python program to calculate the total runs scored by a batsman in a match, considering the number of overs bowled and the runs scored in each over.",
+    "function_name": "calculate_total_runs",
+    "function_template": "def calculate_total_runs(overs, runs_per_over):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "10, 4",
+            "output": "40"
+        },
+        {
+            "input": "5, 3",
+            "output": "15"
+        }
+    ]
+}

@@ -1,1 +1,19 @@
-"{\"userConcept\": \"list comprehension\", \"userInterest\": \"cricket\", \"problem_statement\": \"Write a Python program to create a list of top 5 wicket-takers in a cricket match using a list comprehension\", \"function_name\": \"top_wicket_takers\", \"function_template\": \"def top_wicket_takers(bowlers):\\\\n    # Your code here\\\\n    pass\", \"test_cases\": [{\"input\": \"[{'player': 'Player 1', 'wickets': 3}, {'player': 'Player 2', 'wickets': 2}, {'player': 'Player 3', 'wickets': 4}, {'player': 'Player 4', 'wickets': 1}, {'player': 'Player 5', 'wickets': 3}]\", \"output\": \"['Player 3', 'Player 1', 'Player 5']\"}, {\"input\": \"[{'player': 'Player 1', 'wickets': 2}, {'player': 'Player 2', 'wickets': 3}, {'player': 'Player 3', 'wickets': 1}, {'player': 'Player 4', 'wickets': 2}, {'player': 'Player 5', 'wickets': 2}]\", \"output\": \"['Player 2', 'Player 4']\"}]}"
+{
+    "userConcept": "list comprehension",
+    "userInterest": "tamil movies",
+    "problem_statement": "Write a Python program to create a list of Tamil movie titles from a given list of years and directors",
+    "function_name": "get_movie_titles",
+    "function_template": "def get_movie_titles(years, directors):\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "[2000, 2005, 2010]",
+            "directors": "[S. P. Muthuraman, A. R. Murugadoss, Vikram Kumar]",
+            "output": "['Thavasi', 'Anjaneya', 'Thillalangadi']"
+        },
+        {
+            "input": "[2015, 2018, 2020]",
+            "directors": "[A. R. Murugadoss, Atlee, Karthik Subbaraj]",
+            "output": "['Maaveeran', 'Nerkonda Paarvai', 'Petta']"
+        }
+    ]
+}

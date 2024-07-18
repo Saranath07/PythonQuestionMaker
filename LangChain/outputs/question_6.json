@@ -1,1 +1,17 @@
-"{\"userConcept\": \"file handling\", \"userInterest\": \"anime\", \"problem_statement\": \"Write a Python program to read a file named 'anime_characters.txt' and write the characters' names and their corresponding ages to a new file named 'characters_info.txt'\", \"function_name\": \"write_characters\", \"function_template\": \"def write_characters(input_filename, output_filename):\\n    # Your code here\\n    pass\", \"test_cases\": [{\"input\": \"anime_characters.txt\", \"content\": \"Naruto, 12\\nSasuke, 13\\nSakura, 14\", \"output_filename\": \"characters_info.txt\", \"expected_output\": \"Naruto, 12\\nSasuke, 13\\nSakura, 14\"}, {\"input\": \"anime_characters.txt\", \"content\": \"Light, 18\\nL, 19\\nRyuk, 20\", \"output_filename\": \"characters_info.txt\", \"expected_output\": \"Light, 18\\nL, 19\\nRyuk, 20\"}]}"
+{
+    "userConcept": "file handling",
+    "userInterest": "anime",
+    "problem_statement": "Write a Python program to write the names of top 5 anime shows into a file named 'anime.txt' with each name on a new line.",
+    "function_name": "write_anime",
+    "function_template": "def write_anime():\\n    # Your code here\\n    pass",
+    "test_cases": [
+        {
+            "input": "",
+            "output": "Naruto \\n Attack on Titan \\n Dragon Ball Z \\n One Piece \\n Fullmetal Alchemist"
+        },
+        {
+            "input": "",
+            "output": "Death Note \\n Bleach \\n Sword Art Online \\n Haikyuu!! \\n My Hero Academia"
+        }
+    ]
+}

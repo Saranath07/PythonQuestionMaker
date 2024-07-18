@@ -1,5 +1,21 @@
 import gradio as gr
-from app2 import create_third_page  # Import the function to create the third page
+import os
+import json
+from app2 import create_third_page
+import subprocess
+
+parent_directory = os.path.join('..', 'inputs')
+
+if not os.path.exists(parent_directory):
+    os.makedirs(parent_directory)
+
+def save_data(theme, topic):
+    data = {"theme": theme, "topic": topic}
+    with open(os.path.join(parent_directory, "user_data.json"), "w", encoding='utf-8') as f:
+        json.dump(data, f, indent=4)
+    
+    subprocess.run(["python3", "../LangChain/main.py"])
+    return "Data saved successfully and main.py executed."
 
 # Function to handle the submission of the first page
 def submit_first_page(name, roll_no):
@@ -7,6 +23,7 @@ def submit_first_page(name, roll_no):
 
 # Function to handle the submission of the second page
 def submit_second_page(theme, topic):
+    save_data(theme, topic)
     return f"Selected Theme: {theme}, Selected Topic: {topic}", gr.update(visible=False), gr.update(visible=True)
 
 # Create the Gradio interface
@@ -22,17 +39,17 @@ with gr.Blocks() as demo:
     # Page 2: Theme and Topic Selection
     with gr.Column(visible=False) as page2:
         gr.Markdown("### Page 2: Theme and Topic Selection")
-        theme = gr.Dropdown(label="Select Theme", choices=["Theme 1", "Theme 2", "Theme 3"])
-        topic = gr.Dropdown(label="Select Topic", choices=["Topic A", "Topic B", "Topic C"])
+        theme = gr.Textbox(label="Select theme")
+        topic = gr.Textbox(label="Select Topic")
         submit2 = gr.Button("Submit")
         result2 = gr.Text()
         
     # Page 3: Final Page (imported from app2.py)
-    page3 = create_third_page()
 
     # Setup the click actions
     submit1.click(fn=submit_first_page, inputs=[name, roll_no], outputs=[result1, page1, page2])
+    page3 = create_third_page()
     submit2.click(fn=submit_second_page, inputs=[theme, topic], outputs=[result2, page2, page3])
 
 # Launch the Gradio app
-demo.launch()
+demo.launch(share=True)
