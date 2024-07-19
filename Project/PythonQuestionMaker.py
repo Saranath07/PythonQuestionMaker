@@ -12,18 +12,12 @@ import json
 import os
 import sys
 
-apiKeys = {
-    "LANGCHAIN_API_KEY" : "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",
-    "GROQ_API_KEY" : "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"
-    }
+
+with open("apiKeys.json", "r", encoding='utf-8') as f:
+    apiKeys = json.load(f)
 
 
-parent_directory_1 = os.path.join("..", "inputs")
 
-with open(os.path.join(parent_directory_1, "user_data.json"), "r", encoding='utf-8') as f:
-    # print(os.path.join(parent_directory_1, "user_data.json"))
-    user_json = json.load(f)
-    print(user_json)
 
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
@@ -31,12 +25,12 @@ os.environ["LANGCHAIN_API_KEY"] = apiKeys['LANGCHAIN_API_KEY']
 os.environ["GROQ_API_KEY"] = apiKeys['GROQ_API_KEY']
 class QuestionMaker:
 
-    def __init__(self, userConcept, userInterest, model_name="llama3-8b-8192"):
+    def __init__(self, topic, theme, model_name="llama3-8b-8192"):
 
         # self.userConcepts = userConcepts
         # self.userInterests = userInterests
-        self.userConcept = userConcept
-        self.userInterest = userInterest
+        self.userConcept = topic
+        self.userInterest = theme
         self.model = ChatGroq(model=model_name)
 
 
@@ -82,22 +76,24 @@ class QuestionMaker:
 
 
 
-questionMaker = QuestionMaker(user_json["topic"], user_json["theme"])
 
-userQuestions = questionMaker.get_questions(5)
+#################################################################################
+# questionMaker = QuestionMaker(user_json["topic"], user_json["theme"])
 
-parent_directory = os.path.join('..', 'outputs')
-if not os.path.exists(parent_directory):
-    os.makedirs(parent_directory)
+# userQuestions = questionMaker.get_questions(5)
 
-# Iterate over userQuestions and save each as a JSON file
-for i in range(len(userQuestions)):
-    try:
-        d = ast.literal_eval(userQuestions[i])
-        with open(os.path.join(parent_directory, f"question_{i+1}.json"), "w", encoding='utf-8') as f:
-            json.dump(d, f, indent=4)
-    except Exception as e:
-        print(f"Failed to write question {i+1}: {e}")
+# parent_directory = os.path.join('..', 'outputs')
+# if not os.path.exists(parent_directory):
+#     os.makedirs(parent_directory)
+
+# # Iterate over userQuestions and save each as a JSON file
+# for i in range(len(userQuestions)):
+#     try:
+#         d = ast.literal_eval(userQuestions[i])
+#         with open(os.path.join(parent_directory, f"question_{i+1}.json"), "w", encoding='utf-8') as f:
+#             json.dump(d, f, indent=4)
+#     except Exception as e:
+#         print(f"Failed to write question {i+1}: {e}")
 
 
           
