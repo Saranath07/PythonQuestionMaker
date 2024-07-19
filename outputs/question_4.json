@@ -1,17 +1,27 @@
 {
-    "userConcept": "functions",
-    "userInterest": "cricket",
-    "problem_statement": "Write a Python program to calculate the total runs scored by a team in a cricket match, considering that the team has played two innings, and the scores are given as input by the user.",
-    "function_name": "total_runs",
-    "function_template": "def total_runs(innings1, innings2):\\n    # Your code here\\n    pass",
+    "userConcept": "files",
+    "userInterest": "anime",
+    "problem_statement": "Write a Python program to write the names of popular anime characters into a file named 'anime_chars.txt'",
+    "function_name": "write_anime_chars",
+    "function_template": "def write_anime_chars(filename, anime_chars):\\n    # Your code here\\n    pass",
     "test_cases": [
         {
-            "input": "150, 200",
-            "output": "350"
+            "input": "Naruto",
+            "anime_chars": [
+                "Naruto",
+                "Sasuke",
+                "Sakura"
+            ],
+            "output": "Naruto\nSasuke\nSakura"
         },
         {
-            "input": "250, 180",
-            "output": "430"
+            "input": "Dragon Ball",
+            "anime_chars": [
+                "Goku",
+                "Vegeta",
+                "Trunks"
+            ],
+            "output": "Goku\nVegeta\nTrunks"
         }
     ]
 }

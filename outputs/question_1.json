@@ -1,17 +1,15 @@
 {
-    "userConcept": "functions",
-    "userInterest": "cricket",
-    "problem_statement": "Write a Python program to calculate the total runs scored by a batsman in a match, considering the number of overs bowled and the runs scored in each over.",
-    "function_name": "calculate_total_runs",
-    "function_template": "def calculate_total_runs(overs, runs_per_over):\\n    # Your code here\\n    pass",
+    "userConcept": "files",
+    "userInterest": "anime",
+    "problem_statement": "Write a Python program to write the names of top 5 anime characters from a file named 'anime_characters.txt' to another file named 'top_anime_characters.txt'",
+    "function_name": "write_to_file",
+    "function_template": "def write_to_file(input_file, output_file):\\n    # Your code here\\n    pass",
     "test_cases": [
         {
-            "input": "10, 4",
-            "output": "40"
-        },
-        {
-            "input": "5, 3",
-            "output": "15"
+            "input": "anime_characters.txt",
+            "content": "Naruto \\n Sakura \\n Sasuke \\n Light \\n L \\n",
+            "output_file": "top_anime_characters.txt",
+            "output": "Naruto\\nSakura\\nSasuke\\nLight\\nL\\n"
         }
     ]
 }

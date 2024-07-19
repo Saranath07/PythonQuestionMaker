@@ -1,17 +1,21 @@
 {
-    "userConcept": "functions",
-    "userInterest": "cricket",
-    "problem_statement": "Write a Python program to calculate the total runs scored by a team in a cricket match",
-    "function_name": "calculate_total_runs",
-    "function_template": "def calculate_total_runs(wickets, overs, runs):\\n    # Your code here\\n    pass",
+    "userConcept": "files",
+    "userInterest": "anime",
+    "problem_statement": "Write a Python program to write the names of top 10 anime characters in a file named 'anime_chars.txt'",
+    "function_name": "write_anime_chars",
+    "function_template": "def write_anime_chars(filename):\\n    # Your code here\\n    pass",
     "test_cases": [
         {
-            "input": "5, 10, 150",
-            "output": "150.0"
+            "input": "Naruto",
+            "expected_file_content": "Naruto\\n"
         },
         {
-            "input": "2, 5, 90",
-            "output": "90.0"
+            "input": "Light Yagami",
+            "expected_file_content": "Light Yagami\\n"
+        },
+        {
+            "input": "Lelouch vi Britannia",
+            "expected_file_content": "Lelouch vi Britannia\\n"
         }
     ]
 }

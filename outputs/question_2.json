@@ -1,17 +1,22 @@
 {
-    "userConcept": "functions",
-    "userInterest": "cricket",
-    "problem_statement": "Write a Python program to calculate the total runs scored by a batsman in a cricket match.",
-    "function_name": "calculate_runs",
-    "function_template": "def calculate_runs(match_details):\\n    runs = 0\\n    for innings in match_details:\\n        runs += innings[1]\\n    return runs",
+    "userConcept": "files",
+    "userInterest": "anime",
+    "problem_statement": "Write a Python program to write anime titles and their corresponding ratings into a file named 'anime_ratings.txt'",
+    "function_name": "write_anime_ratings",
+    "function_template": "def write_anime_ratings(anime_titles, ratings):\\n    # Your code here\\n    pass",
     "test_cases": [
         {
-            "input": "[['innings 1', 30], ['innings 2', 45]]",
-            "output": "75"
-        },
-        {
-            "input": "[['innings 1', 20], ['innings 2', 25], ['innings 3', 35]]",
-            "output": "80"
+            "input": [
+                "Naruto",
+                "Dragon Ball Z",
+                "One Piece"
+            ],
+            "ratings": [
+                8.5,
+                9.0,
+                9.5
+            ],
+            "output": "Naruto 8.5\nDragon Ball Z 9.0\nOne Piece 9.5\n"
         }
     ]
 }

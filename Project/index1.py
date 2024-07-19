@@ -4,7 +4,7 @@ import json
 import ast
 from PythonQuestionMaker import QuestionMaker
 
-def create_third_page():
+def create_third_page(data_state):
     with gr.Column(visible=False) as page3:
         with gr.Row():
             question_select = gr.Dropdown(label="Select Question", choices=[], interactive=True)
@@ -13,7 +13,7 @@ def create_third_page():
         # Display test case inputs in separate boxes
         input_box1 = gr.Textbox(label="Input for Test Case 1", interactive=False)
         input_box2 = gr.Textbox(label="Input for Test Case 2", interactive=False)
-
+        # json_display = gr.JSON()
         code_input = gr.Code(label="Write your code here", language="python")
         output_box1 = gr.Textbox(label="Output for Test Case 1")
         output_box2 = gr.Textbox(label="Output for Test Case 2")
@@ -60,8 +60,9 @@ def create_third_page():
             
             return outputs
 
-        question_select.change(fn=update_question, inputs=[question_select, gr.State()], outputs=[question_display, input_box1, input_box2, code_input])
-        run_button.click(fn=run_code, inputs=[code_input, question_select, gr.State()], outputs=[output_box1, output_box2])
+        question_select.change(fn=update_question, inputs=[question_select, data_state], outputs=[question_display, input_box1, input_box2, code_input])
+        # question_select.change(fn=update_question, inputs=[question_select, data_state], outputs=json_display)
+        run_button.click(fn=run_code, inputs=[code_input, question_select, data_state], outputs=[output_box1, output_box2])
         
     return page3, question_select
 
@@ -69,14 +70,14 @@ with gr.Blocks() as demo:
     data_state = gr.State([])  
     
     with gr.Column(visible=True) as page1:
-        gr.Markdown("### Page 1: User Details")
+        gr.Markdown("# Page 1: User Details")
         name = gr.Textbox(label="Name")
         roll_no = gr.Textbox(label="Roll Number")
         submit1 = gr.Button("Submit")
         result1 = gr.Text()
         
     with gr.Column(visible=False) as page2:
-        gr.Markdown("### Page 2: Theme and Topic Selection")
+        gr.Markdown("# Page 2: Theme and Topic Selection")
         theme = gr.Textbox(label="Select theme")
         topic = gr.Textbox(label="Select Topic")
         submit2 = gr.Button("Submit")
@@ -100,7 +101,7 @@ with gr.Blocks() as demo:
         return f"Selected Theme: {theme}, Selected Topic: {topic}", new_data, gr.update(visible=False), gr.update(visible=True)
 
     submit1.click(fn=submit_first_page, inputs=[name, roll_no], outputs=[result1, page1, page2])
-    page3, question_select = create_third_page()
+    page3, question_select = create_third_page(data_state)
     submit2.click(fn=submit_second_page, inputs=[theme, topic], outputs=[result2, data_state, page2, page3])
     
    
