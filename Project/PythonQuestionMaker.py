@@ -77,23 +77,7 @@ class QuestionMaker:
 
 
 
-#################################################################################
-# questionMaker = QuestionMaker(user_json["topic"], user_json["theme"])
 
-# userQuestions = questionMaker.get_questions(5)
-
-# parent_directory = os.path.join('..', 'outputs')
-# if not os.path.exists(parent_directory):
-#     os.makedirs(parent_directory)
-
-# # Iterate over userQuestions and save each as a JSON file
-# for i in range(len(userQuestions)):
-#     try:
-#         d = ast.literal_eval(userQuestions[i])
-#         with open(os.path.join(parent_directory, f"question_{i+1}.json"), "w", encoding='utf-8') as f:
-#             json.dump(d, f, indent=4)
-#     except Exception as e:
-#         print(f"Failed to write question {i+1}: {e}")
 
 
           
