@@ -7,6 +7,7 @@ from PythonQuestionMaker import QuestionMaker
 def create_third_page(data_state):
     with gr.Column(visible=False) as page3:
         with gr.Row():
+<<<<<<< HEAD
             with gr.Column(scale=1):
                 question_select = gr.Dropdown(label="Select Question", choices=[], interactive=True)
                 question_display = gr.Textbox(label="Question", interactive=False)
@@ -22,6 +23,18 @@ def create_third_page(data_state):
             with gr.Column():
                 output_box1 = gr.Textbox(label="Output for Test Case 1")
                 output_box2 = gr.Textbox(label="Output for Test Case 2")
+=======
+            question_select = gr.Dropdown(label="Select Question", choices=[], interactive=True)
+            question_display = gr.Textbox(label="Question", interactive=False)
+        
+        # Display test case inputs in separate boxes
+        input_box1 = gr.Textbox(label="Input for Test Case 1", interactive=False)
+        input_box2 = gr.Textbox(label="Input for Test Case 2", interactive=False)
+        code_input = gr.Code(label="Write your code here", language="python")
+        output_box1 = gr.Textbox(label="Output for Test Case 1")
+        output_box2 = gr.Textbox(label="Output for Test Case 2")
+        run_button = gr.Button("Run")
+>>>>>>> 990c3f7 (Small changes to code)
 
         def update_question(selected_question, data):
             if data is None or not data:
@@ -97,6 +110,10 @@ with gr.Blocks() as demo:
         for i in range(len(userQuestions)):
             try:
                 d = ast.literal_eval(userQuestions[i])
+<<<<<<< HEAD
+=======
+                
+>>>>>>> 990c3f7 (Small changes to code)
                 new_data.append(d)
             except Exception as e:
                 print(f"Failed to write question {i+1}: {e}")
@@ -110,4 +127,8 @@ with gr.Blocks() as demo:
     
     data_state.change(fn=lambda new_data: gr.update(choices=[d['problem_statement'] for d in new_data]), inputs=data_state, outputs=question_select)
 
+<<<<<<< HEAD
 demo.launch()
+=======
+demo.launch()
+>>>>>>> 990c3f7 (Small changes to code)
