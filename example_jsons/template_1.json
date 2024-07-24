@@ -2,16 +2,16 @@
     "userConcept" : "functions",
     "userInterest" : "cricket",
     "problem_statement": "Write a python program to add the total scores of the batsman in his two innings",
-    "function_name": "add",
-    "function_template": "def add_scores(score1, score2):\\n    # Your code here\\n    pass",
+    "function_name": "add_scores",
+    "function_template": "def add_scores(score1:int, score2:int)->int:\\n    # Your code here\\n    pass",
     "test_cases": [
         {
-            "input": "10, 20",
-            "output": "30"
+            "input": [10, 20],
+            "output": 30
         },
         {
-            "input": "46, 52",
-            "output": "98"
+            "input": [46, 52],
+            "output": 98
         }
     ]
 }
