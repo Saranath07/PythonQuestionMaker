@@ -42,20 +42,21 @@ class QuestionMaker:
             template_1 = str(json.load(f))
         
         # print(type(template_1))
-        parent_directory_3 = os.path.join("..", "example_jsons")
-        with open(os.path.join(parent_directory_3, "template_2.json"), "r") as f:
-            template_2 = str(json.load(f))
+        # parent_directory_3 = os.path.join("..", "example_jsons")
+        # with open(os.path.join(parent_directory_3, "template_2.json"), "r") as f:
+        #     template_2 = str(json.load(f))
         
         
         messages = [
             SystemMessage(content=f"""
             Generate a valid python programming question with 2 or more test cases for the given 
             concept and theme in json format strictly without any other extra sentances. STRICTLY USE DOUBLE QUOTES \"\" for JSON PARSABLE IN PYTHON.
-            """),
+            The template should have the function definition with docstring and type hints.
+            Inputs and outputs in the testcases should be of the same type as the input and return types.          """),
             HumanMessage(content=f"Concept : functions, Theme : cricket"),
             AIMessage(content=template_1),
-            HumanMessage(content=f"Concept : file handling, Theme : fruits"),
-            AIMessage(content=template_2),
+            # HumanMessage(content=f"Concept : file handling, Theme : fruits"),
+            # AIMessage(content=template_2),
             HumanMessage(content=f"Concept : {userConcept}, Theme : {userInterest}")
         ]
 

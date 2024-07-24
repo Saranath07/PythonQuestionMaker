@@ -64,21 +64,23 @@ def create_second_page():
 
 # Function to create the third page
 def create_third_page():
-    with gr.Column(visible=False) as page3:
+    with gr.Column(visible=True) as page3:
         with gr.Row():
-            question_display = gr.Textbox(label="Question", value=question, interactive=False)
+            with gr.Column():
+                question_display = gr.Textbox(label="Question", value=question, interactive=False)
+                input_box1 = gr.Textbox(label="Input for Test Case 1", value=test_cases[0]['input'], interactive=False)
+                input_box2 = gr.Textbox(label="Input for Test Case 2", value=test_cases[1]['input'], interactive=False)
+                code_input = gr.Code(label="Write your code here", language="python", value=function_template)
+                run_button = gr.Button("Run")
+            
+            with gr.Column():
+                output_box1 = gr.Textbox(label="Output for Test Case 1")
+                output_box2 = gr.Textbox(label="Output for Test Case 2")
         
-        # Display test case inputs in separate boxes
-        input_box1 = gr.Textbox(label="Input for Test Case 1", value=test_cases[0]['input'], interactive=False)
-        input_box2 = gr.Textbox(label="Input for Test Case 2", value=test_cases[1]['input'], interactive=False)
-
-        code_input = gr.Code(label="Write your code here", language="python", value=function_template)
-        output_box1 = gr.Textbox(label="Output for Test Case 1")
-        output_box2 = gr.Textbox(label="Output for Test Case 2")
-        run_button = gr.Button("Run")
-
         run_button.click(fn=run_code, inputs=code_input, outputs=[output_box1, output_box2])
+    
     return page3
+
 
 # if __name__ == "__main__":
 #     with gr.Blocks() as app:
