@@ -7,23 +7,6 @@ from PythonQuestionMaker import QuestionMaker
 def create_third_page(data_state):
     with gr.Column(visible=False) as page3:
         with gr.Row():
-<<<<<<< HEAD
-            with gr.Column(scale=1):
-                question_select = gr.Dropdown(label="Select Question", choices=[], interactive=True)
-                question_display = gr.Textbox(label="Question", interactive=False)
-                input_box1 = gr.Textbox(label="Input for Test Case 1", interactive=True)
-                input_box2 = gr.Textbox(label="Input for Test Case 2", interactive=True)
-
-            with gr.Column(scale=1):
-                code_input = gr.Code(label="Write your code here", language="python", lines=20)
-
-        with gr.Row():
-            with gr.Column():
-                run_button = gr.Button("Run")
-            with gr.Column():
-                output_box1 = gr.Textbox(label="Output for Test Case 1")
-                output_box2 = gr.Textbox(label="Output for Test Case 2")
-=======
             question_select = gr.Dropdown(label="Select Question", choices=[], interactive=True)
             question_display = gr.Textbox(label="Question", interactive=False)
         
@@ -34,7 +17,6 @@ def create_third_page(data_state):
         output_box1 = gr.Textbox(label="Output for Test Case 1")
         output_box2 = gr.Textbox(label="Output for Test Case 2")
         run_button = gr.Button("Run")
->>>>>>> 990c3f7 (Small changes to code)
 
         def update_question(selected_question, data):
             if data is None or not data:
