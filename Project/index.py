@@ -66,7 +66,7 @@ def create_third_page(data_state):
     return page3, question_select
 
 with gr.Blocks() as demo:
-    data_state = gr.JSON([])  
+    data_state = gr.State([])  
     
     with gr.Column(visible=True) as page1:
         gr.Markdown("# Page 1: User Details")
