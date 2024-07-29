@@ -78,7 +78,7 @@ def create_third_page(data_state):
 
                 # Run all test cases
                 for test_case in selected_data['test_cases']:
-                    inputs = test_case["input"]
+                    inputs = list(map(int, test_case["input"].split(", ")))
                     expected_output = int(test_case["output"])
 
                     # Execute the function with the test case inputs
@@ -117,3 +117,4 @@ with gr.Blocks(css=".small-button { padding: 5px 10px; font-size: 12px; }") as d
     data_state.change(fn=lambda new_data: gr.update(choices=[d['problem_statement'] for d in new_data]), inputs=data_state, outputs=question_select)
 
 demo.launch(share = True)
+
