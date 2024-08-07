@@ -74,7 +74,8 @@ class QuestionMaker:
 
         return list(questions)
 
-
+# q = QuestionMaker("list", "animie")
+# print(q.get_questions(5))
 
 
 
